@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("hello")
+        let today = new Date(2022, 5, 30, 15, 6, 4);
+        let day = today.getDay();
+        let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let dayName = daysOfWeek[day];
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        let seconds = today.getSeconds();
+        let FA = "AM";
+        if (hours > 12) {
+            hours -= 12;
+            FA = "PM";
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        document.write("today is : " + dayName + "<br>" + "Current time is :" + hours + FA + ":" + minutes + ":" + seconds)
+
+    </script>
+    <!-- <script>
+        // Get current date and time
+        let now = new Date();
+
+        // Get day of the week as a string
+        let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let dayOfWeek = daysOfWeek[now.getDay()];
+
+        // Get hours, minutes and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        // Determine if it's AM or PM
+        let meridiem = "AM";
+        if (hours > 12) {
+            hours -= 12;
+            meridiem = "PM";
+        }
+
+        // Pad minutes and seconds with leading zeros if necessary
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        // Construct the output string
+        let output = "Today is: " + dayOfWeek + "\nCurrent time is: " + hours + " " + meridiem + " : " + minutes + " : " + seconds;
+
+        // Display the output
+        console.log(output);
+        console.log(output);
+        console.log(output);
+        
+        
+
+    </script> -->
+    <hr>
+    <script>
+        const a = [20, 10, 30];
+        var largestnumber = a[0];
+        for (let i = 1; i < a.length; i++) {
+            if (a[i] > largestnumber) {
+                largestnumber = a[i]
+            }
+        }
+        document.write("largest number is :" + largestnumber);
+    </script>
+    <hr>
+    <script>
+        let n1=3;
+        let n2=-7;
+        let n3=2;
+        let product=n1*n2*n3;
+        var sign="0"
+        if(product>1){
+           sign="+"
+        }
+        else{
+            sign="-"
+        }
+        console.log(" product of three number is :"+product+"\nsign of the product of three number is:"+sign)
+        
+    </script>
+    <hr>
+   <script>
+    const num = [12,4,78,54,1,-8,-9,-1]
+    for(let i=0;i<num.length;i++){
+        for(let j=i+1;j<num.length;j++){
+            var temp;
+            if(num[i]<num[j]){
+                temp = num[i];
+                num[i]= num[j];
+                num[j]=temp;
+            }
+        }
+    }
+    document.write("Sorted array is : " + num);
+   </script>
+   <hr>
+   <script>
+    const arr=[0,-1,4];
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            var temp;
+            if(arr[i]<arr[j]){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    document.write("sort of array is:"+arr);
+   </script>
+   <hr>
+   <script>
+    for(let i=0;i<16;i++){
+        if(i%2==0){
+            document.write(i+"is even<br>")
+        }
+        else{
+            document.write(i+"is odd<br>")
+        }
+    }
+   </script>
+   <hr>
+   <script>
+    for(let i=1;i<=100;i++){
+        if(i%5==0 && i%3==0){
+            document.write("FizzBuzz<br>")
+        }
+        else if(i%5==0){
+            document.write("Buzz<br>")
+        }
+        else if(i%3==0){
+            document.write("Fizz<br>")
+        }
+        else{
+            document.write(i+"<br>");
+        }
+    }
+   </script>
+   <hr>
+   <script>
+    
+var x,y,chr;
+for(x=1; x <=6; x++)
+{
+   for (y=1; y < x; y++)
+     {
+    chr=chr+("*");        
+      }
+ console.log(chr);
+ chr='';    
+}
+   </script>
+   <hr>
+   <script>
+ let height = 5; // Change this value to adjust the height of the pyramid
+
+for (let i = 1; i <= height; i++) {
+  let row = '';
+  for (let j = 1; j <= height - i; j++) {
+    row += ' '; // Add spaces for left-side indentation
+  }
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    row += '*'; // Add asterisks for the pyramid shape
+  }
+  console.log(row);
+}
+
+
+   </script>
+</body>
+
+</html>
